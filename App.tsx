@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 
 export default function App() {
   return (
@@ -8,7 +8,13 @@ export default function App() {
       <StatusBar style="auto" />
       <View style={styles.header}>
         <Image source={require("./src/assets/arrow-left.png")}></Image>
+        <View style={styles.imputTextView}>
         <Image source={require("./src/assets/ei_search.png")}></Image>
+        <TextInput style={styles.textImput} placeholder="pesquisar"
+        placeholderTextColor="#F5FFFF">
+
+        </TextInput>
+        </View>
         <Image source={require("./src/assets/share.png")}></Image>
       </View>
     </View>
@@ -29,5 +35,19 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     alignItems:"center",
     paddingTop:50,
+  },
+  imputTextView:{
+    flex:1,
+    borderRadius:28,
+    backgroundColor:"#2C4877",
+    marginHorizontal:10,
+    height:40,
+    alignItems:"center",
+    flexDirection:"row",
+  },
+  textImput:{
+    flex:1,
+    paddingRight:10,
+    color:'#F5FFFF',
   },
 });
