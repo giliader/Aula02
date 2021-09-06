@@ -2,6 +2,23 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 
+const LinksHeader=()=>{
+  return(
+      <View style={StyleLinksHeader.container}>
+          <Text>Eu sou o aluno</Text>
+      </View>
+  );
+};
+
+const StyleLinksHeader = StyleSheet.create({
+  container:{
+    backgroundColor:"blue",color:"white"
+  }
+
+}); 
+
+
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -12,11 +29,12 @@ export default function App() {
         <Image source={require("./src/assets/ei_search.png")}></Image>
         <TextInput style={styles.textImput} placeholder="pesquisar"
         placeholderTextColor="#F5FFFF">
-
         </TextInput>
         </View>
         <Image source={require("./src/assets/share.png")}></Image>
       </View>
+      <LinksHeader></LinksHeader>
+
     </View>
   );
 }
