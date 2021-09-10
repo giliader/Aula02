@@ -46,9 +46,9 @@ const styleLinksHeader = StyleSheet.create({
  const LinksShare = ()=>{
    return(
      <View style={styleLinksShare.container}>
-       <Text style={styleLinksShare.link}> <Image source={require("./src/assets/link-like.png")}></Image>Like</Text>
-       <Text style={styleLinksShare.link}> <Image source={require("./src/assets/link-coment.png")}></Image>Comemnt</Text>
-       <Text style={styleLinksShare.link}><Image source={require("./src/assets/link-share.png")}></Image>Share</Text>
+       <Text style={styleLinksShare.link}> <Image source={require("./src/assets/link-like.png")}></Image>  Like</Text>
+       <Text style={styleLinksShare.link}> <Image source={require("./src/assets/link-coment.png")}></Image>  Comemnt</Text>
+       <Text style={styleLinksShare.link}><Image source={require("./src/assets/link-share.png")}></Image>  Share</Text>
      </View>
    );
  };
