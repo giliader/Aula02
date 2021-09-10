@@ -29,6 +29,7 @@ const LinksHeader=()=>{
   );
 };
 
+
 const styleLinksHeader = StyleSheet.create({
   container:{
     color:"white",
@@ -42,8 +43,29 @@ const styleLinksHeader = StyleSheet.create({
   },
 }); 
 
+ const LinksShare = ()=>{
+   return(
+     <View style={styleLinksShare.container}>
+       <Text style={styleLinksShare.link}> <Image source={require("./src/assets/link-like.png")}></Image>Like</Text>
+       <Text style={styleLinksShare.link}> <Image source={require("./src/assets/link-coment.png")}></Image>Comemnt</Text>
+       <Text style={styleLinksShare.link}><Image source={require("./src/assets/link-share.png")}></Image>Share</Text>
+     </View>
+   );
+ };
 
-
+ const styleLinksShare = StyleSheet.create ({
+   container:{
+    flex:1,
+    flexDirection:"row",
+    justifyContent:"space-between",
+    paddingHorizontal:55,
+    paddingVertical:19,
+    
+   },
+   link:{
+    color:"#4A4A4C",
+   }
+ });
 export default function App() {
   return (
     <View style={styles.container}>
@@ -59,10 +81,11 @@ export default function App() {
         <Image source={require("./src/assets/share.png")}></Image>
       </View>
       <LinksHeader></LinksHeader>
-
+      <LinksShare></LinksShare>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
