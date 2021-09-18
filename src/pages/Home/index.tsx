@@ -1,7 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack'; 
+import { StackNavigatorParamList } from './types';
+import { styleLinksHeader, styleLinksShare, styleOneLinkHeader, styles } from './styles';
 
+    
 
 const OneLinksHeader=(props:any)=>{
     return(
@@ -11,11 +16,7 @@ const OneLinksHeader=(props:any)=>{
     );
   };
 
-  const styleOneLinkHeader = StyleSheet.create({
-    link:{
-      color:"#4A4A4C",
-    }
-  }); 
+  
   
   const LinksHeader=()=>{
     return(
@@ -29,18 +30,7 @@ const OneLinksHeader=(props:any)=>{
     );
   };
   
-  const styleLinksHeader = StyleSheet.create({
-    container:{
-      color:"white",
-      flexDirection:"row",
-      justifyContent:"space-between",
-      paddingHorizontal:35,
-      paddingVertical:10,
-      borderBottomColor:"#F0F0F0",
-      borderBottomWidth:0.5,
   
-    },
-  }); 
   
    const LinksShare = ()=>{
      return(
@@ -52,21 +42,15 @@ const OneLinksHeader=(props:any)=>{
      );
    };
   
-   const styleLinksShare = StyleSheet.create ({
-     container:{
-      flex:1,
-      flexDirection:"row",
-      justifyContent:"space-between",
-      paddingHorizontal:55,
-      paddingVertical:19,
-      
-     },
-     link:{
-      color:"#4A4A4C",
-     },
-   });
+  
 
+   type  HomeProps = NativeStackNavigationProp<StackNavigatorParamList,'Login'>;
 const Home = ()=>{
+    const navigation = useNavigation<HomeProps>();
+    function irParaTelaLogin(){
+        navigation.navigate('Login');
+    }
+
     return(
         <View style={styles.container}>
       <StatusBar style="auto" />
@@ -82,43 +66,13 @@ const Home = ()=>{
       </View>
       <LinksHeader></LinksHeader>
       <LinksShare></LinksShare>
+      <View style={styles.viewButton} >
+            <TouchableOpacity style={styles.button} onPress={irParaTelaLogin}>
+            <Text style={styles.viewButtontext}>Ir para Tela Login</Text>
+            </TouchableOpacity>
+        </View>
     </View>
         );
-    };
-
-const styles = StyleSheet.create({
-    container:{
-      flex: 1,
-      backgroundColor: '#fff',
-    },
-
-    header:{
-      minHeight:70,
-      backgroundColor:'#4369B0',
-      paddingVertical:30,
-      flexDirection:"row",
-      justifyContent:"space-between",
-      alignItems:"center",
-      paddingHorizontal:30,
-      paddingTop:50,
-    },
-
-    imputTextView:{
-      flex:1,
-      borderRadius:28,
-      backgroundColor:"#2C4877",
-      marginHorizontal:10,
-      height:40,
-      alignItems:"center",
-      flexDirection:"row",
-    },
-
-    textImput:{
-      flex:1,
-      paddingRight:10,
-      color:'#F5FFFF',
-    },
-  });
-  
+    };  
 
 export default Home;
