@@ -54,7 +54,14 @@ export const Post = () =>{
 
             <View style={styles.viewButton}>
                 <TouchableOpacity style={styles.button} onPress={()=>{}}>
-                    <Text style={styles.viewButtonText}> Learn More</Text>
+                    <Text style={styles.viewButtonText}>Learn More</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.buttonMensager} onPress={()=>{}}>
+                    <Image style={{width:16,height:16}} source={require('../../assets/btnmensagem.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonMais}  onPress={()=>{}}>
+                    <Image style={{height:3,width:13}} source={require('../../assets/3pontos.png')}/>
                 </TouchableOpacity>
             </View>
 

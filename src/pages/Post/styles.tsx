@@ -69,13 +69,21 @@ export const styles = StyleSheet.create({
         paddingLeft:5,
     },
     viewButton:{
+        borderRadius:5,
+        flexDirection:'row',
+
+
+
+    },
+      
+
+    button:{
+        flex:5,
         backgroundColor:'#3D7BE2',
         alignItems:'center',
         justifyContent:'center',
         borderRadius:5,
-
     },
-    button:{},
     viewButtonText:{
         color: '#FDF7FD',
         fontSize:15,
@@ -83,5 +91,22 @@ export const styles = StyleSheet.create({
         textAlignVertical:'center',
 
 
+    },
+    buttonMensager:{
+        flex:1,
+        backgroundColor: '#3D7BE2',
+        justifyContent:'center',
+        alignItems:'center',
+        marginLeft:10,
+        borderRadius:5,
+    },
+    buttonMais:{
+        flex:1,
+        borderColor: '#3D7BE2',
+        borderWidth:1,
+        marginLeft:10,
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:5,
     },
 });

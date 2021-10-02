@@ -17,6 +17,7 @@ const Login = () => {
         <View style={styles.container}>
             <StatusBar style="auto" />
             <Text style={styles.texto}>Facebook</Text> 
+            <Image style={{width:50,height:50,top:138,left:25}} source={require('../../assets/facebook.png')}/>
 
             <View style={styles.imputTextView}>
             <TextInput style={styles.textImput} placeholder="Email"

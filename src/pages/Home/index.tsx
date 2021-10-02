@@ -55,9 +55,7 @@ const Home = ()=>{
                 <Post/>
                 <Post/>
                 <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+               
             </ScrollView>
 
           <View style={styles.viewButton} >
