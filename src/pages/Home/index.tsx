@@ -4,7 +4,7 @@ import { Text, View, Image, TextInput, TouchableOpacity,ScrollView } from 'react
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'; 
 import { StackNavigatorParamList } from '../../types';
-import { styleLinksHeader, /*styleLinksShare,*/ styleOneLinkHeader, styles } from './styles';
+import { styleLinksHeader, styleOneLinkHeader, styles } from './styles';
 import {Post} from '../Post';
     
 
@@ -30,20 +30,6 @@ const OneLinksHeader=(props:any)=>{
     );
   };
   
-  
-  
-  /* const LinksShare = ()=>{
-     return(
-       <View style={styleLinksShare.container}>
-         <Text style={styleLinksShare.link}><Image source={require("../../assets/link-like.png")}></Image>  Like</Text>
-         <Text style={styleLinksShare.link}><Image source={require("../../assets/link-coment.png")}></Image>  Comemnt</Text>
-         <Text style={styleLinksShare.link}><Image source={require("../../assets/link-share.png")}></Image>  Share</Text>
-       </View>
-     );
-   };*/
-  
-  
-
    type  HomeProps = NativeStackNavigationProp<StackNavigatorParamList,'Login'>;
 const Home = ()=>{
     const navigation = useNavigation<HomeProps>();
@@ -65,12 +51,6 @@ const Home = ()=>{
         <Image source={require("../../assets/share.png")}></Image>
       </View>
       <LinksHeader></LinksHeader>
-      
-     
-      
-
-        <Post/>
-
         <ScrollView>
                 <Post/>
                 <Post/>

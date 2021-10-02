@@ -19,19 +19,6 @@ export  const styleLinksHeader = StyleSheet.create({
     },
   }); 
 
-/*export  const styleLinksShare = StyleSheet.create ({
-    container:{
-     flex:1,
-     flexDirection:"row",
-     justifyContent:"space-between",
-     paddingHorizontal:55,
-     paddingVertical:19,
-     
-    },
-    link:{
-     color:"#4A4A4C",
-    },
-  });*/
 
 export  const styles = StyleSheet.create({
     container:{
