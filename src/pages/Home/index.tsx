@@ -3,9 +3,9 @@ import React from 'react';
 import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'; 
-import { StackNavigatorParamList } from './types';
+import { StackNavigatorParamList } from '../../types';
 import { styleLinksHeader, styleLinksShare, styleOneLinkHeader, styles } from './styles';
-
+import {Post} from '../Post';
     
 
 const OneLinksHeader=(props:any)=>{
@@ -66,11 +66,15 @@ const Home = ()=>{
       </View>
       <LinksHeader></LinksHeader>
       <LinksShare></LinksShare>
-      <View style={styles.viewButton} >
-            <TouchableOpacity style={styles.button} onPress={irParaTelaLogin}>
-            <Text style={styles.viewButtontext}>Ir para Tela Login</Text>
-            </TouchableOpacity>
-        </View>
+      
+
+        <Post/>
+        
+          <View style={styles.viewButton} >
+              <TouchableOpacity style={styles.button} onPress={irParaTelaLogin}>
+              <Text style={styles.viewButtontext}>Ir para Tela Login</Text>
+              </TouchableOpacity>
+          </View>
     </View>
         );
     };  

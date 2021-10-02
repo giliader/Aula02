@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'; 
-import { StackNavigatorParamList } from './types';
+import { StackNavigatorParamList } from '../../types';
 import { styles } from './styles';
 
     type  LoginProps = NativeStackNavigationProp<StackNavigatorParamList,'Home'>;
