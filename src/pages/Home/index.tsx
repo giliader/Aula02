@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { Text, View, Image, TextInput, TouchableOpacity,ScrollView } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'; 
 import { StackNavigatorParamList } from '../../types';
-import { styleLinksHeader, styleLinksShare, styleOneLinkHeader, styles } from './styles';
+import { styleLinksHeader, /*styleLinksShare,*/ styleOneLinkHeader, styles } from './styles';
 import {Post} from '../Post';
     
 
@@ -32,7 +32,7 @@ const OneLinksHeader=(props:any)=>{
   
   
   
-   const LinksShare = ()=>{
+  /* const LinksShare = ()=>{
      return(
        <View style={styleLinksShare.container}>
          <Text style={styleLinksShare.link}><Image source={require("../../assets/link-like.png")}></Image>  Like</Text>
@@ -40,7 +40,7 @@ const OneLinksHeader=(props:any)=>{
          <Text style={styleLinksShare.link}><Image source={require("../../assets/link-share.png")}></Image>  Share</Text>
        </View>
      );
-   };
+   };*/
   
   
 
@@ -65,11 +65,21 @@ const Home = ()=>{
         <Image source={require("../../assets/share.png")}></Image>
       </View>
       <LinksHeader></LinksHeader>
-      <LinksShare></LinksShare>
+      
+     
       
 
         <Post/>
-        
+
+        <ScrollView>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+            </ScrollView>
+
           <View style={styles.viewButton} >
               <TouchableOpacity style={styles.button} onPress={irParaTelaLogin}>
               <Text style={styles.viewButtontext}>Ir para Tela Login</Text>

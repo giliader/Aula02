@@ -19,7 +19,7 @@ export  const styleLinksHeader = StyleSheet.create({
     },
   }); 
 
-export  const styleLinksShare = StyleSheet.create ({
+/*export  const styleLinksShare = StyleSheet.create ({
     container:{
      flex:1,
      flexDirection:"row",
@@ -31,7 +31,7 @@ export  const styleLinksShare = StyleSheet.create ({
     link:{
      color:"#4A4A4C",
     },
-  });
+  });*/
 
 export  const styles = StyleSheet.create({
     container:{
